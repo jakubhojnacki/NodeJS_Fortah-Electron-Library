@@ -1,0 +1,18 @@
+{
+    "name": "fortah-electron-library",
+    "displayName": "Fortah Electron Library",
+    "description": "Library with Electron-style application and tools",
+    "version": "1.0.0",
+    "author": "Fortah - Jakub Hojnacki <jakubhojnacki@gmail.com>",
+    "date": "January 2022",
+    "type": "module",
+    "main": "./src/main.mjs",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jakubhojnacki/zip-library.git"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "fortah-core-library": "file:../FortahCoreLibrary"
+    }
+}
