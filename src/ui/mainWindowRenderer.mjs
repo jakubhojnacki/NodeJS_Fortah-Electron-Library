@@ -3,35 +3,42 @@
  * @description Represents renderer part of the main window
  */
 
-const electron = require("electron");
-const path = require("path");
+import Electron from "electron";
+import Path from "path";
 
+/*TODO - Resolve
 const ApplicationInformation = require("../application/applicationInformation");
 const HtmlToolkit = require("../userInterface/htmlToolkit");
 const Settings = require("../settings/settings");
 const Spinner = require('../userInterface/spinner');
 const Splitter = require("../userInterface/splitter");
+*/
 
-require("../general/javaScript");
-
-class MainWindowRenderer {
+export class MainWindowRenderer {
+    /*TODO - Resolve
     get settings() { return this.mSettings; }
     set settings(pValue) { this.mSettings = pValue; }
     get notesContainer() { return this.mNotesContainer; }
     set notesContainer(pValue) { this.mNotesContainer = pValue; }
+    */
 
     constructor() {
+        /*TODO - Resolve
         this.mSettings = null;
         this.mNotesContainer = null;        
+        */
     }
 
     run() {
+        /*TODO - Resolve
         const spinner = new Spinner(mainContainer);
         const __this = this;
-        electron.ipcRenderer.on('getSettings', (lEvent, lArgs) => { __this.runWithSettings(lEvent, lArgs); });
-        electron.ipcRenderer.send('getSettings');
+        Electron.ipcRenderer.on('getSettings', (lEvent, lArgs) => { __this.runWithSettings(lEvent, lArgs); });
+        Electron.ipcRenderer.send('getSettings');
+        */
     }
 
+    /*TODO - Resolve
     runWithSettings(pEvent, pArgs) {
         this.settings = Settings.deserialise(pArgs);
         const cssHref = `../css/${this.settings.window.darkMode ? "darkTheme.css" : "lightTheme.css"}`;
@@ -46,8 +53,8 @@ class MainWindowRenderer {
     
     updateApplicationInformation() {
         const __this = this;
-        electron.ipcRenderer.on('getApplicationInformation', (lEvent, lArgs) => { __this.onGetApplicationInformation(lEvent, lArgs); });
-        electron.ipcRenderer.send('getApplicationInformation');
+        Electron.ipcRenderer.on('getApplicationInformation', (lEvent, lArgs) => { __this.onGetApplicationInformation(lEvent, lArgs); });
+        Electron.ipcRenderer.send('getApplicationInformation');
     }
 
     onGetApplicationInformation(pEvent, pArgs) {
@@ -57,7 +64,7 @@ class MainWindowRenderer {
 
     loadMainWindow() {
         console.info("[loadMainWindow]");
-        mainContainer.innerHTML = HtmlToolkit.applyTemplate(path.join(__dirname, "../../ejs/applicationWindow.ejs"));
+        mainContainer.innerHTML = HtmlToolkit.applyTemplate(Path.join(__dirname, "../../ejs/applicationWindow.ejs"));
         const splitter = new Splitter(desktopContainer, "notebookContainer", "notebookCategories", "notebookProperties", "30%");
 
         toolBarContainer.innerHTML = "ToolBar"; //TODO - Remove
@@ -65,6 +72,5 @@ class MainWindowRenderer {
         notebookCategories.innerHTML = "Categories"; //TODO - Remove
         notebookProperties.innerHTML = "Properties"; //TODO - Remove
     }
+    */
 }
-
-module.exports = MainWindow;
