@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-security-policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/applicationWindow.css" rel="stylesheet">
+        <link href="../css/spinner.css" rel="stylesheet">
+        <link href="../css/splitter.css" rel="stylesheet">
+        <title>...</title>
+    </head>
+    <body>
+        <div id="mainContainer"></div>
+        <script lang="js">
+            import MainWindowRenderer from "../src/ui/mainWindowRenderer";
+            const mainWindowRenderer = new MainWindowRenderer();
+            mainWindowRenderer.run();
+        </script>
+    </body>
+</html>
