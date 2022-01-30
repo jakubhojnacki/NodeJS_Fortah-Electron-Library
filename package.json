@@ -13,6 +13,7 @@
     },
     "license": "ISC",
     "dependencies": {
-        "fortah-core-library": "file:../FortahCoreLibrary"
+        "fortah-core-library": "file:../FortahCoreLibrary",
+        "fortah-html-library": "file:../FortahHTMLLibrary"
     }
 }

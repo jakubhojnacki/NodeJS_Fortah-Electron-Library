@@ -55,5 +55,3 @@ export class MainWindow {
         pEvent.sender.send('getSettings', data);
     }
 }
-
-module.exports = ApplicationWindowMain;
