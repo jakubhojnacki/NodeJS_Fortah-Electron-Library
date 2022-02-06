@@ -16,9 +16,10 @@ export class ElectronApplication extends ApplicationBase {
     run() {
         super.run();
         const __this = this;
-        Electron.app.on('ready', () => { __this.onElectronAppReady(); })
-        Electron.app.on('activate', () => { __this.onElectronAppActivate(); });
-        Electron.app.on('window-all-closed', () => { __this.onElectronAppWindowAllClosed(); });        
+        Electron.app.on("ready", () => { __this.onElectronAppReady(); })
+        //TODO - Do we need it?
+        //Electron.app.on('activate', () => { __this.onElectronAppActivate(); });
+        Electron.app.on("window-all-closed", () => { __this.onElectronAppWindowAllClosed(); });        
     }
 
     onElectronAppReady() {
@@ -26,10 +27,11 @@ export class ElectronApplication extends ApplicationBase {
         mainWindow.run();
     }
 
-    onElectronAppActivate() {
-        if (BrowserWindow.getAllWindows().length === 0)
-            this.createMainWindow();
-    }
+    //TODO - Do we need it?
+    // onElectronAppActivate() {
+    //     if (BrowserWindow.getAllWindows().length === 0)
+    //         this.createMainWindow();
+    // }
 
     onElectronAppWindowAllClosed() {
         if (process.platform !== "darwin")
